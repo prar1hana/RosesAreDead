@@ -88,13 +88,14 @@ $shadowcolor2:rgba(174, 228, 151, 0.514);
             width: 500px;
           }
           .login_button{
-            color: red;
+            color: rgb(128, 0, 0);
             padding: 20px;
-            border-radius: 25%;
+            // border-radius: 25% ;
+            border: 1px solid rgb(128, 0, 0);
             &:hover {
-              color: rgba(128, 0, 0, 0.222);
+              color:red;
               background-color: white;
-              border: 1px solid rgb(128, 0, 0);
+              border: 1px solid red;
             }
           }
           display: flex;
@@ -110,6 +111,7 @@ $shadowcolor2:rgba(174, 228, 151, 0.514);
           display: flex;
           align-items: center;
           gap: 10px;
+          border-bottom: 1px solid;
 
           h6 {
             font-size: large;
