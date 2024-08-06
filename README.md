@@ -1,3 +1,5 @@
+"All Rights Reserved"
+
 Home Page (1)
 ![image](https://github.com/user-attachments/assets/733804d8-1d01-4c94-b2b6-49aedd0f61fd)
 
