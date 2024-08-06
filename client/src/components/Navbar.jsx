@@ -28,28 +28,34 @@ const Navbar = () => {
         
         
         <div className="links">
-
+          
+        <div className="navbarlinks">
+            <Link className="link" to="/">
+              HOME
+            </Link>
+        </div>
+        
         <div className="navbarlinks">
             <Link className="link" to="/write">
-              CREATE!
+              CREATE
             </Link>
         </div>
 
         <div className="navbarlinks">
           <Link className="link" to="/?cat=art">
-            <h6>ART</h6>
+            <h6>ART & SCLUPTURE</h6>
           </Link>
         </div>
 
         <div className="navbarlinks">
-          <Link className="link" to="/?cat=science">
-            <h6>SCIENCE</h6>
+          <Link className="link" to="/?cat=Photography">
+            <h6>PHOTOGRAPHY</h6>
           </Link>
           </div>
 
         <div className="navbarlinks">
           <Link className="link" to="/?cat=technology">
-            <h6>TECHNOLOGY</h6>
+            <h6>POETRY & WRITINGS</h6>
           </Link>
           </div>
 
@@ -59,15 +65,11 @@ const Navbar = () => {
           </Link>
           </div>
         <div className="navbarlinks">
-          <Link className="link" to="/?cat=design">
-            <h6>DESIGN</h6>
+          <Link className="link" to="/?cat=Books">
+            <h6>BOOKS</h6>
           </Link>
         </div>
-        <div className="navbarlinks">
-          <Link className="link" to="/?cat=food">
-            <h6>FOOD</h6>
-          </Link>       
-        </div> 
+        
         </div>
       </div>
     </div>

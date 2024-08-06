@@ -152,11 +152,20 @@ footer {
   border-top: 1px solid;
   min-height: 10vh;
   padding: 20px;
-  background-color: #f8f9fa; /* Example color, replace with $footercolor if using a preprocessor */
+  background-color: #ffffff; /* Example color, replace with $footercolor if using a preprocessor */
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 12px;
+
+  p {
+    color: rgb(202, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    align-self: center;
+    padding: 0.5rem;
+    // transition: color 0.3s;
+  }
 }
 
 footer img {
@@ -450,5 +459,294 @@ footer img {
         }
       }
     }
+  }
+}
+$footercolor: #ffffff;
+$shadowcolor: rgba(174, 228, 151, 0.514);
+$shadowcolor1: rgba(216, 163, 192, 0.514);
+$shadowcolor2: rgba(174, 228, 151, 0.514);
+
+.app {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 15px;
+    
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    //-----------------------------------------NAVBAR-------------------------------------
+    .navbar {
+      .container {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 10;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+        .logo {
+          padding: 10px;
+          img {
+            width: 100%;
+            max-width: 500px;
+          }
+          .login_button {
+            color: rgb(128, 0, 0);
+            padding: 20px;
+            border: 1px solid rgb(128, 0, 0);
+            &:hover {
+              color: red;
+              background-color: white;
+              border: 1px solid red;
+            }
+          }
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+        
+        .links {
+          width: 100%;
+          justify-content: space-around;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          border-bottom: 1px solid;
+
+          h6 {
+            font-size: 1rem;
+            font-weight: 300;
+          }
+
+          span {
+            cursor: pointer;
+          }
+
+          .navbarlinks {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            border: 1px solid white;
+
+            &:hover {
+              color: rgba(0, 128, 128, 0.222);
+              background-color: white;
+              border: 1px solid teal;
+            }
+          }
+        }
+      }
+    }
+
+    //------------------------HOME------------------------------------------------
+    .home {
+      .posts {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post {
+          display: flex;
+          gap: 100px;
+
+          &:nth-child(2n + 1) { // Alternate image and text order in the home page
+            flex-direction: row-reverse;
+          }
+
+          &:nth-child(2n) .img::after { // For even posts
+            background-color: $shadowcolor2;
+          }
+
+          &:nth-child(2n + 1) .img::after { // For odd posts
+            background-color: $shadowcolor1;
+          }
+
+          .img {
+            flex: 2;
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 20px;
+              left: -20px;
+              z-index: -1;
+            }
+
+            img {
+              width: 100%;
+              max-height: 400px;
+              object-fit: cover;
+            }
+          }
+
+          .content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1 {
+              font-size: 2.5rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+
+            button {
+              width: max-content;
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              background-color: white;
+              border: 1px solid teal;
+              color: teal;
+
+              &:hover {
+                color: rgba(0, 128, 128, 0.222);
+                background-color: white;
+                border: 1px solid teal;
+              }
+            }
+          }
+        }
+      }
+    }
+
+//----------------------------------- Responsive styles------------------------------
+//------------------------768----------------------------------------------
+    @media (max-width: 768px) {
+      .navbar {
+        .container {
+          flex-direction: column;
+          align-items: center;
+
+          .logo {
+            img {
+              max-width: 70vw;
+            }
+          }
+
+          .links {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+
+      .home {
+        .posts {
+          gap: 50px;
+          margin: 3rem;
+          .post {
+            flex-direction: column;
+            gap: 30px;
+
+            &:nth-child(2n+1) {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+        .footer-links {
+          flex-direction: column;
+          gap: 10px;
+          li {
+            margin: 0;
+          }
+        }
+      }
+
+    }
+//---------------------------------480-----------------------------------
+    @media (max-width: 480px) {
+      .navbar {
+        .container {
+          .logo {
+            img {
+              max-width: 200px;
+            }
+          }
+
+          .links {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+          }
+        }
+      }
+
+      .home {
+        .posts {
+          gap: 30px;
+          margin: 3rem;
+          .post {
+            flex-direction: column;
+            gap: 10px;
+
+            .img img {
+              max-height: 300px;
+              max-width: 300px ;
+            }
+
+            .content {
+              h1 {
+                font-size: 1.5rem;
+              }
+
+              p {
+                font-size: 0.875rem;
+              }
+            }
+          }
+        }
+      }
+    
+
+    footer {
+      padding: 10px;
+      min-height: auto;
+      top: 20vh;
+      font-size: 10px;
+  
+      img {
+        height: 40px;
+      }
+  
+      .footer-links {
+        p{
+          font-size: 14px;
+        }
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
   }
 }

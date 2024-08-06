@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <footer>
       <img src={Logo} alt="" />
+      <p>All Rights Reserved</p>
       <span>
+        
       <ul class="footer-links">
         <li><a href="https://github.com/prar1hana">GitHub</a></li>
         <li><a href="https://www.instagram.com/prarthanaphukan_/">Instagram</a></li>

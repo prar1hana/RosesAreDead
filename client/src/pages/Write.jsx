@@ -55,11 +55,12 @@ const Write = () => {
       <div className="content">
         <input
           type="text"
-          placeholder="Title"
+          placeholder="Add a title"
           onChange={(e) => setTitle(e.target.value)}
         />
         <div className="editorContainer">
           <ReactQuill
+            placeholder="Your content goes here..."
             className="editor"
             theme="snow"
             value={value}
@@ -84,7 +85,7 @@ const Write = () => {
             onChange={(e) => setFile(e.target.files[0])}
           />
           <label className="file" htmlFor="file">
-            Upload Image
+          <button>Upload Image</button>
           </label>
           <div className="buttons">
             <button>Save as a draft</button>
@@ -102,29 +103,29 @@ const Write = () => {
               id="art"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="art">Art</label>
+            <label htmlFor="art">Art & Sculpture</label>
           </div>
           <div className="cat">
             <input
               type="radio"
-              checked={cat === "science"}
+              checked={cat === "Photography"}
               name="cat"
-              value="science"
-              id="science"
+              value="Photography"
+              id="Photography"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="science">Science</label>
+            <label htmlFor="Photography">Photography</label>
           </div>
           <div className="cat">
             <input
               type="radio"
-              checked={cat === "technology"}
+              checked={cat === "PoetrynWritings"}
               name="cat"
-              value="technology"
-              id="technology"
+              value="PoetrynWritings"
+              id="PoetrynWritings"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="technology">Technology</label>
+            <label htmlFor="tePoetrynWritings">Poetry & Writings</label>
           </div>
           <div className="cat">
             <input
@@ -140,24 +141,13 @@ const Write = () => {
           <div className="cat">
             <input
               type="radio"
-              checked={cat === "design"}
+              checked={cat === "Books"}
               name="cat"
-              value="design"
-              id="design"
+              value="Books"
+              id="Books"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="design">Design</label>
-          </div>
-          <div className="cat">
-            <input
-              type="radio"
-              checked={cat === "food"}
-              name="cat"
-              value="food"
-              id="food"
-              onChange={(e) => setCat(e.target.value)}
-            />
-            <label htmlFor="food">Food</label>
+            <label htmlFor="Books">Books</label>
           </div>
         </div>
       </div>
