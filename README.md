@@ -28,11 +28,11 @@ Install dependencies:
 yarn install
 
 (Optional) Add react-scripts if it's not already installed:
-yarn add react-scripts
+###yarn add react-scripts
 
 Navigate to the client directory and initialize it:
-cd client
-yarn init
+### cd client
+### yarn init
 
 Start the development server:
 yarn start
@@ -41,16 +41,16 @@ USING NPM
 If you prefer using npm instead of Yarn, follow these instructions:
 
 Install dependencies:
-npm install
+### npm install
 
 (Optional) Add react-scripts if it's not already installed:
-npm install react-scripts
+### npm install react-scripts
 
 Navigate to the client directory and initialize it:
-cd client
-npm init
+###cd client
+###npm init
 
 Start the development server:
-npm start
+###npm start
 
 If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
