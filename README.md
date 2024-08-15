@@ -12,6 +12,8 @@ Create Page
 Home Page(2)
 ![image](https://github.com/user-attachments/assets/48731855-74e3-455b-b788-017942926070)
 
+Post Page
+![image](https://github.com/user-attachments/assets/52433a03-a838-4ca3-b701-58800d43c4ab)
 
 
 To run it in your local host follow the following steps-
