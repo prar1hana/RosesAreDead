@@ -20,19 +20,28 @@ First, clone the repository to your local machine:
 
 ```bash
 git clone <repository-url>
+```
+```bash
 cd <repository-name>
+```
 
-
-USING YARN
+### USING YARN
 Install dependencies:
+```bash
 yarn install
+```
 
-(Optional) Add react-scripts if it's not already installed:
-###yarn add react-scripts
+#(Optional) Add react-scripts if it's not already installed:
+```bash
+yarn add react-scripts
+```
 
-Navigate to the client directory and initialize it:
-### cd client
-### yarn init
+#Navigate to the client directory and initialize it:
+cd client
+```bash
+yarn init
+```
+
 
 Start the development server:
 yarn start
