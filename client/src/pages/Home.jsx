@@ -63,11 +63,11 @@ const Home = () => {
              {/*<img src={`../upload/${post?.img}`} alt="" /> */}              
             </div>
             <div className="content">
-              <Link className="link" to={`/post/${post.id}`}>
                 <h1>{post.title}</h1>
-              </Link>
-              <p>{getText(post.desc)}</p>
-              <button>Read More</button>
+                <p>{getText(post.desc)}</p>
+                <Link className="link" to={`/post/${post.id}`}>
+                  <button>Read More</button>
+                </Link>
             </div>
           </div>
         ))}
